@@ -27,7 +27,7 @@ export const useSendInstruction = () => {
  * 
  * Im using javascript Native api fetch
  * though in a large applications we can use SWR or AXIOS to handle http calls to make it
- * more robust and simple. In our case we need to light and no need to use those libraries.
+ * more robust and simple. In our case we need to be lightweight and no need to use those libraries.
  * 
  */
   const fetchInstructions = async (instructionSet: string) => {
