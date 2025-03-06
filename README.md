@@ -34,6 +34,7 @@ npm run test
 - Has preview modal for each items on successfull flights table (shows billboard details using ```localhost:4001/get-billboard?id=5aba7bffddc4ecbbb81e7fad```
 - Is using git flow for automated post commit test checks (check badge and commit check icon)
 - Scalable on small devices
+- E2E and Component Testing via [Playwright](https://playwright.dev) run ``` npm run test ```
 
 ## Nice to have features (productionise)
 - Should able to save successfull flights (flight sessions with billboard pictures) to DB
