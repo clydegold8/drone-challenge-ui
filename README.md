@@ -23,7 +23,7 @@ http://localhost:5173
 ```js
 npm run test
 ```
-## App Manual Short Guide
+## App Short Manual Guide
 - You can read the short manual on its [WIKI](https://github.com/clydegold8/drone-challenge-ui/wiki/App-Short-Manual-Guide)
 
 ## App Features (Implemented)
