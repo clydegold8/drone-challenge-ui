@@ -70,6 +70,12 @@ export default defineConfig({
     // },
   ],
 
+  webServer: {
+    command: 'npm run dev',
+    url: 'http://localhost:5173',
+    timeout: 120000,
+  },
+
   /* Run your local dev server before starting the tests */
   // webServer: {
   //   command: 'npm run start',

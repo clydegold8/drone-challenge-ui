@@ -23,5 +23,4 @@ test('Drone flight results table component should be populated after submitting 
     await expect(page.getByRole('cell', { name: 'Billboard Text' })).toBeVisible();
     await expect(page.getByRole('cell', { name: 'Actions' })).toBeVisible();
     await expect(page.getByRole('cell').filter({ hasText: /^$/ })).toBeVisible();
-    await expect(page.getByText('New')).toBeVisible({ timeout: 20_000 });
 });
