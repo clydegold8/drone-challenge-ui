@@ -23,6 +23,9 @@ http://localhost:5173
 ```js
 npm run test
 ```
+## App Manual Short Guide
+- You can read the short manual on its [WIKI](https://github.com/clydegold8/drone-challenge-ui/wiki/App-Short-Manual-Guide)
+
 ## App Features (Implemented)
 - App is created by React + TypeScript + Vite (SPA app)
 - used Tailwind with Daisy UI libraries (Lightweight and Utility first CSS)
