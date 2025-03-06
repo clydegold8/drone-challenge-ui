@@ -42,6 +42,30 @@ test("Controller details component should show the inputed instructions from the
 test("Controller details component should show additional info when submitting the instructions to the drone", async ({
   page,
 }) => {
+  await page.route(
+    "**/instruct-drone?instructions=^%3Cv%3Ex",
+    async (route) => {
+      const json = {
+        success: true,
+        instructions: "^<v>x",
+        billboards: [
+          {
+            id: "ebc574feffbc122beaa6c5fa",
+            x: 0,
+            y: 0,
+            photosTaken: 1,
+            advertiser: "Howell, Gutkowski and Rolfson",
+            address: "987 Tyree Well",
+            billboardText:
+              "The blue Mouse combines Turkey aesthetics with Radon-based durability",
+            image: "https://picsum.photos/seed/OWCNI/400/250?grayscale",
+          },
+        ],
+      };
+      await route.fulfill({ json });
+    }
+  );
+
   await page.goto("http://localhost:5173/");
   await page
     .getByRole("group")
