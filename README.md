@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# Bigdatr Control Panel UI (Front-end Code Challenge) 
+ [![Playwright Tests](https://github.com/clydegold8/drone-challenge-ui/actions/workflows/playwright.yml/badge.svg)](https://github.com/clydegold8/drone-challenge-ui/actions/workflows/playwright.yml)
+-  This repo contains the control panel UI for the Bigdatr drone. This will show the intuitive UI for providing instructions to the drone remotely through API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
+## Installation Guide
+ - clone this repo in your local 
 ```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+git clone https://github.com/clydegold8/drone-challenge-ui.git
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
+- after cloning, install the required depedencies
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+npm install
 ```
+- Run the local server
+```js
+npm run dev
+```
+- You can access the local through
+```js
+http://localhost:5173
+```
+- You can run tests by this command
+```js
+npm run test
+```
+## App Features (Implemented)
+- App is created by React + TypeScript + Vite (SPA app)
+- used Tailwind with Daisy UI libraries (Lightweight and Utility first CSS)
+- used vanilla JS for composables (lightweight)
+- Controller Directional Pads Interface
+- Added console window to see inputed instructions and status using ```http://localhost:4001/instruct-drone?instructions=x^xv```
+- Has Controller details to show if the drone has got the commands
+- Has Result flight table for the successfull flights (flight sessions with billboard pictures)
+- Has preview modal for each items on successfull flights table (shows billboard details using ```localhost:4001/get-billboard?id=5aba7bffddc4ecbbb81e7fad```
+- Is using git flow for automated post commit test checks (check badge and commit check icon)
+- Scalable on small devices
+
+## Nice to have features (productionise)
+- Should able to save successfull flights (flight sessions with billboard pictures) to DB
+- Able to retrieve and delete successfull flights
+- sorting and pagination implementation on API and Front end specifically on tables
+- use Axios or SWR for handling http calls
+- Theme switcher (optional)
